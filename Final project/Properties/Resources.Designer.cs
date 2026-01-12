@@ -63,9 +63,39 @@ namespace Final_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Character2 {
+            get {
+                object obj = ResourceManager.GetObject("Character2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EoW_Throne_Room {
             get {
                 object obj = ResourceManager.GetObject("EoW_Throne_Room", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TextBox {
+            get {
+                object obj = ResourceManager.GetObject("TextBox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ThroneRoom {
+            get {
+                object obj = ResourceManager.GetObject("ThroneRoom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

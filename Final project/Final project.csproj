@@ -83,5 +83,14 @@
   <ItemGroup>
     <None Include="Resources\EoW_Throne_Room.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThroneRoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Character2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextBox.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
