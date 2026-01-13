@@ -63,9 +63,29 @@ namespace Final_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BadCharacter {
+            get {
+                object obj = ResourceManager.GetObject("BadCharacter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Character2 {
             get {
                 object obj = ResourceManager.GetObject("Character2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chracter3_evil_ {
+            get {
+                object obj = ResourceManager.GetObject("chracter3(evil)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,16 @@ namespace Final_project.Properties {
         internal static System.Drawing.Bitmap ThroneRoom {
             get {
                 object obj = ResourceManager.GetObject("ThroneRoom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zelda {
+            get {
+                object obj = ResourceManager.GetObject("Zelda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
