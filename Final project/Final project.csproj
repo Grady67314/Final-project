@@ -101,5 +101,23 @@
   <ItemGroup>
     <None Include="Resources\Zelda.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Greedy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\character5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kindKing.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

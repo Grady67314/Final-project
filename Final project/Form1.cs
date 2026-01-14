@@ -18,6 +18,7 @@ namespace Final_project
         int gold = 1000;
         int morality = 0;
         string currentCharacter;
+        int tally = 0;
         public Form1()
         {
             InitializeComponent();
@@ -26,14 +27,14 @@ namespace Final_project
         private void keepButton_Click(object sender, EventArgs e)
         {
             morality -= 10;
-            display();
+            Display();
         }
 
         private void giveButton_Click(object sender, EventArgs e)
         {
             gold -= 100;
             morality += 10;
-            display();
+            Display();
         }
 
         
@@ -45,15 +46,39 @@ namespace Final_project
             int character = randName.Next(0, 6);
             switch (character)
             {
-                
-                
+                case 1:
+                    pictureBox2.Visible = true;
+                    break;
+                case 2:
+                    rockPaperScissors.Visible = true;
+                    break; 
+
             }
             currentCharacter = names[character];
            
         }
-        private void display()
+        private void Display()
         {
             statLabel.Text = "Gold: " + gold + "\nMorality: " + morality;
-        }       
+        }     
+        private void Check()
+        {
+            if (tally == 10) 
+            {
+                if (gold <= 0 & morality > 0)
+                {
+                    KindKing();
+                }
+            }
+        }
+        private void KindKing()
+        {
+            kindkingPictureBox.Visible = true;
+        }
+
+        private void rockButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
