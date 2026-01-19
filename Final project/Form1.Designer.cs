@@ -28,20 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.giveButton = new System.Windows.Forms.Button();
             this.keepButton = new System.Windows.Forms.Button();
             this.statLabel = new System.Windows.Forms.Label();
             this.ganonPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.zeldaPictureBox = new System.Windows.Forms.PictureBox();
             this.linkPictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.characterPictureBox = new System.Windows.Forms.PictureBox();
             this.rockPaperScissors = new System.Windows.Forms.PictureBox();
-            this.rockButton = new System.Windows.Forms.Button();
             this.kindkingPictureBox = new System.Windows.Forms.PictureBox();
+            this.outputLabel = new System.Windows.Forms.Label();
+            this.pictureBoxTimer = new System.Windows.Forms.Timer(this.components);
+            this.addButton = new System.Windows.Forms.Button();
+            this.subtractButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ganonPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zeldaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.linkPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.characterPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rockPaperScissors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindkingPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +54,7 @@
             // giveButton
             // 
             this.giveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.giveButton.Location = new System.Drawing.Point(455, 259);
+            this.giveButton.Location = new System.Drawing.Point(452, 259);
             this.giveButton.Name = "giveButton";
             this.giveButton.Size = new System.Drawing.Size(93, 42);
             this.giveButton.TabIndex = 0;
@@ -90,17 +95,19 @@
             this.ganonPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ganonPictureBox.TabIndex = 5;
             this.ganonPictureBox.TabStop = false;
+            this.ganonPictureBox.Visible = false;
             // 
-            // pictureBox1
+            // zeldaPictureBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Final_project.Properties.Resources.Zelda;
-            this.pictureBox1.Location = new System.Drawing.Point(246, 189);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.zeldaPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.zeldaPictureBox.Image = global::Final_project.Properties.Resources.Zelda;
+            this.zeldaPictureBox.Location = new System.Drawing.Point(246, 189);
+            this.zeldaPictureBox.Name = "zeldaPictureBox";
+            this.zeldaPictureBox.Size = new System.Drawing.Size(150, 151);
+            this.zeldaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.zeldaPictureBox.TabIndex = 6;
+            this.zeldaPictureBox.TabStop = false;
+            this.zeldaPictureBox.Visible = false;
             // 
             // linkPictureBox
             // 
@@ -112,51 +119,84 @@
             this.linkPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.linkPictureBox.TabIndex = 7;
             this.linkPictureBox.TabStop = false;
+            this.linkPictureBox.Visible = false;
             // 
-            // pictureBox2
+            // characterPictureBox
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Final_project.Properties.Resources.character1;
-            this.pictureBox2.Location = new System.Drawing.Point(246, 200);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 151);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
+            this.characterPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.characterPictureBox.Image = global::Final_project.Properties.Resources.character1;
+            this.characterPictureBox.Location = new System.Drawing.Point(246, 189);
+            this.characterPictureBox.Name = "characterPictureBox";
+            this.characterPictureBox.Size = new System.Drawing.Size(150, 151);
+            this.characterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.characterPictureBox.TabIndex = 8;
+            this.characterPictureBox.TabStop = false;
             // 
             // rockPaperScissors
             // 
             this.rockPaperScissors.BackColor = System.Drawing.Color.Transparent;
             this.rockPaperScissors.Image = global::Final_project.Properties.Resources.Rock;
-            this.rockPaperScissors.Location = new System.Drawing.Point(246, 190);
+            this.rockPaperScissors.Location = new System.Drawing.Point(246, 177);
             this.rockPaperScissors.Name = "rockPaperScissors";
             this.rockPaperScissors.Size = new System.Drawing.Size(150, 161);
             this.rockPaperScissors.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.rockPaperScissors.TabIndex = 9;
             this.rockPaperScissors.TabStop = false;
-            // 
-            // rockButton
-            // 
-            this.rockButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rockButton.Location = new System.Drawing.Point(75, 178);
-            this.rockButton.Name = "rockButton";
-            this.rockButton.Size = new System.Drawing.Size(90, 38);
-            this.rockButton.TabIndex = 10;
-            this.rockButton.Text = "Rock";
-            this.rockButton.UseVisualStyleBackColor = true;
-            this.rockButton.Click += new System.EventHandler(this.rockButton_Click);
+            this.rockPaperScissors.Visible = false;
             // 
             // kindkingPictureBox
             // 
             this.kindkingPictureBox.BackColor = System.Drawing.Color.Transparent;
             this.kindkingPictureBox.Image = global::Final_project.Properties.Resources.kindKing;
-            this.kindkingPictureBox.Location = new System.Drawing.Point(246, 213);
+            this.kindkingPictureBox.Location = new System.Drawing.Point(246, 200);
             this.kindkingPictureBox.Name = "kindkingPictureBox";
             this.kindkingPictureBox.Size = new System.Drawing.Size(150, 138);
             this.kindkingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.kindkingPictureBox.TabIndex = 11;
             this.kindkingPictureBox.TabStop = false;
+            this.kindkingPictureBox.Visible = false;
+            // 
+            // outputLabel
+            // 
+            this.outputLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.outputLabel.Location = new System.Drawing.Point(395, 200);
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(153, 46);
+            this.outputLabel.TabIndex = 12;
+            this.outputLabel.Text = "label1";
+            this.outputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxTimer
+            // 
+            this.pictureBoxTimer.Tick += new System.EventHandler(this.pictureBoxTimer_Tick);
+            // 
+            // addButton
+            // 
+            this.addButton.Location = new System.Drawing.Point(455, 305);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(90, 35);
+            this.addButton.TabIndex = 13;
+            this.addButton.Text = "+10";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // subtractButton
+            // 
+            this.subtractButton.Location = new System.Drawing.Point(75, 307);
+            this.subtractButton.Name = "subtractButton";
+            this.subtractButton.Size = new System.Drawing.Size(90, 33);
+            this.subtractButton.TabIndex = 14;
+            this.subtractButton.Text = "-10";
+            this.subtractButton.UseVisualStyleBackColor = true;
+            this.subtractButton.Click += new System.EventHandler(this.subtractButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(398, 134);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 32);
+            this.label1.TabIndex = 15;
             // 
             // Form1
             // 
@@ -164,12 +204,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Final_project.Properties.Resources.ThroneRoom;
             this.ClientSize = new System.Drawing.Size(638, 352);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.subtractButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.kindkingPictureBox);
-            this.Controls.Add(this.rockButton);
             this.Controls.Add(this.rockPaperScissors);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.characterPictureBox);
             this.Controls.Add(this.linkPictureBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.zeldaPictureBox);
             this.Controls.Add(this.ganonPictureBox);
             this.Controls.Add(this.statLabel);
             this.Controls.Add(this.keepButton);
@@ -178,9 +221,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ganonPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zeldaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.linkPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.characterPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rockPaperScissors)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kindkingPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -194,12 +237,16 @@
         private System.Windows.Forms.Button keepButton;
         private System.Windows.Forms.Label statLabel;
         private System.Windows.Forms.PictureBox ganonPictureBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox zeldaPictureBox;
         private System.Windows.Forms.PictureBox linkPictureBox;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox characterPictureBox;
         private System.Windows.Forms.PictureBox rockPaperScissors;
-        private System.Windows.Forms.Button rockButton;
         private System.Windows.Forms.PictureBox kindkingPictureBox;
+        private System.Windows.Forms.Label outputLabel;
+        private System.Windows.Forms.Timer pictureBoxTimer;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button subtractButton;
+        private System.Windows.Forms.Label label1;
     }
 }
 
