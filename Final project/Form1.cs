@@ -110,7 +110,7 @@ namespace Final_project
         }        
         private void Form1_Load(object sender, EventArgs e)
         {
-            //decides what tyhe first persons name is
+            //randomly picks what the first persons name is
             int newName = randName.Next(0, 5);
             string currentCharacter = names[newName];
             textLabel.Text = "I " + currentCharacter +  " ask for 100 gold to buy new crops for my farm to feed the kindom next year.";
@@ -143,6 +143,7 @@ namespace Final_project
                             name += 1;
                             break;
                         case 1:
+                            //switches from the rock paper scissors guy to the kind king 
                             rockPaperScissors.Visible = false;
                             kindkingPictureBox.Visible = true;
                             textLabel.Text = "My kingdom is under attack and we ned gold to fund our army. How much Gold can you give us? ";
@@ -156,6 +157,7 @@ namespace Final_project
                             
                             break;
                         case 2:
+                            //switches from the kind king to ganon 
                             kindkingPictureBox.Visible = false;
                             ganonPictureBox.Visible = true;
                             ganon = true;
@@ -166,15 +168,16 @@ namespace Final_project
                             name += 1;
                             break;
                         case 3:
+                            //switches from ganon to link
                             outputLabel.Visible = false;
                             ganonPictureBox.Visible = false;
                             linkPictureBox.Visible = true;
                             link = true;
+                            //the if statement is there because link will ask different things based off of the attack boolean
                             if (attack == true)
                             {
                                 textLabel.Text = "Please sire I only need 100 gold to stop Ganon from invading.";
-                                
-                                
+                                                               
                             }
                             else
                             {
@@ -184,8 +187,10 @@ namespace Final_project
                             name += 1;
                             break;
                         case 4:
+                            //the if statement is there because zelda will say different things based on the attack and safe booleans 
                             if (safe == true && attack == true)
                             {
+                                //switches from link to zelda 
                                 linkPictureBox.Visible = false;
                                 zeldaPictureBox.Visible = true;
                                 zelda = true;
@@ -194,6 +199,7 @@ namespace Final_project
                             }
                             else if ( attack == true && safe != true)
                             {
+                                //switches from link to zelda
                                 linkPictureBox.Visible = false;
                                 zeldaPictureBox.Visible = true;
                                 zelda = true;
@@ -217,6 +223,8 @@ namespace Final_project
        }
         private void Check()
         {
+            linkPictureBox.Visible = false;
+            zeldaPictureBox.Visible = false;
             //stops user from interacting after the game is done
             giveButton.Visible = false;
             keepButton.Visible = false;
