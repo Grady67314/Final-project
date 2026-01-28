@@ -52,7 +52,7 @@
             // giveButton
             // 
             this.giveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.giveButton.Location = new System.Drawing.Point(452, 259);
+            this.giveButton.Location = new System.Drawing.Point(455, 257);
             this.giveButton.Name = "giveButton";
             this.giveButton.Size = new System.Drawing.Size(93, 42);
             this.giveButton.TabIndex = 0;
@@ -172,6 +172,7 @@
             this.addButton.TabIndex = 13;
             this.addButton.Text = "+10";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Visible = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // subtractButton
@@ -182,6 +183,7 @@
             this.subtractButton.TabIndex = 14;
             this.subtractButton.Text = "-10";
             this.subtractButton.UseVisualStyleBackColor = true;
+            this.subtractButton.Visible = false;
             this.subtractButton.Click += new System.EventHandler(this.subtractButton_Click);
             // 
             // outputLabel
@@ -191,6 +193,7 @@
             this.outputLabel.Name = "outputLabel";
             this.outputLabel.Size = new System.Drawing.Size(126, 42);
             this.outputLabel.TabIndex = 15;
+            this.outputLabel.Visible = false;
             // 
             // Form1
             // 
@@ -201,6 +204,9 @@
             this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.subtractButton);
             this.Controls.Add(this.addButton);
+            this.Controls.Add(this.statLabel);
+            this.Controls.Add(this.keepButton);
+            this.Controls.Add(this.giveButton);
             this.Controls.Add(this.textLabel);
             this.Controls.Add(this.kindkingPictureBox);
             this.Controls.Add(this.rockPaperScissors);
@@ -208,9 +214,6 @@
             this.Controls.Add(this.linkPictureBox);
             this.Controls.Add(this.zeldaPictureBox);
             this.Controls.Add(this.ganonPictureBox);
-            this.Controls.Add(this.statLabel);
-            this.Controls.Add(this.keepButton);
-            this.Controls.Add(this.giveButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
